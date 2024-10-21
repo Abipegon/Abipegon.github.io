@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #85b5e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Auth section */
+    .auth-section {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* Form Container Styles */
+    .form-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .form-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-container input:focus {
+      border-color: #4CAF50; /* Lime green color */
+      outline: none;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50; /* Lime green */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #45a049; /* Darker lime green */
+      transform: translateY(-2px);
+    }
+
+    .form-container p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-container a {
+      color: #4CAF50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .form-container a:hover {
+      color: #388e3c;
+    }
+/* Centering the form */
+    .auth-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Adding smooth animations */
+    .auth-section .form-container {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Login and Registration Section -->
+  <section class="auth-section">
+    <!-- Login Form -->
+    <div id="login-form" class="form-container">
+      <h2>Iniciar Sesión en Control Semanal</h2>
+      <form id="login" action="index.html" method="GET">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="email" required>
+        <label for="login-password">Contraseña:</label>
+        <input type="password" id="login-password" name="password" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <p>¿No tienes cuenta en nuestra app de control personalizado? <a href="#" onclick="toggleForm()">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="register-form" class="form-container" style="display: none;">
+      <h2>Registro</h2>
+      <form id="register" action="index.html" method="GET">
+        <label for="register-name">Nombre:</label>
+        <input type="text" id="register-name" name="name" required>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" name="email" required>
+        <label for="register-password">Contraseña:</label>
+        <input type="password" id="register-password" name="password" required>
+        <button type="submit">Registrarse</button>
+      </form>
+      <p>¿Ya tienes cuenta? <a href="#" onclick="toggleForm()">Inicia sesión aquí</a></p>
+    </div>
+  </section>
+
+  <script>
+    // Toggle between Login and Register forms
+    function toggleForm() {
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+      registerForm.style.display = registerForm.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
+
+
+  <!-- Main Content (Hidden until logged in) -->
+  <main class="main-container" style="display:none;" id="dashboard">
+    <section class="first-section">
+      <div class="main-card">
+        <div class="main-card__user">
+          <img class="main-card__image" src="./images/image-jeremy.png" alt="user.img">
+        </div>
+        <p class="main-card__title">Reportes Personalizados</p>
+        <p class="main-card__name">Flor Gonzalez</p>
+      </div>
+
+      <div class="main-card__dates">
+        <p id="daily" class="main-card__frequency --active">Diario</p>
+        <p id="weekly" class="main-card__frequency">Semanal</p>
+        <p id="monthly" class="main-card__frequency">Mensual</p>
+      </div>
+    </section>
+
+    <section class="second-section">
+    
+    <div class="card">
+      <div class="card__background">
+        <img class ="card_image" src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Trabaja</p>
+            <img class ="card_dots" src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__time">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous"> - 7hrs</p>
+        </div>
+      </div>
+    </div>
+<div class="card">
+      <div class="card__background">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__background">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__background">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__background">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__background">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+<section class="second-section">
+
+    <div class="card">
+      <div class="card__background">
+        <img class="card__image" src="./images/icon-work.svg" alt="">
+      </div>
+
+      <div class="card__details">
+        <div class="card__activity">
+          <p class="card__title">Work</p>
+            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="three dots">
+        </div>
+        <div class="card__hours">
+          <pclass="card__hour"><5hrs/p>
+          <p class="card__previous">Previous - 7hrs</p>
+        </div>
+      </div>
+    </div>
+      <!-- Tarjetas de actividad -->
+      <!-- Aquí puedes agregar las tarjetas como en el código original -->
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Gonzalez Medrano</a>.
+  </footer>
+
+  <script>
+    // Toggle between Login and Register forms
+    function toggleForm() {
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+      registerForm.style.display = registerForm.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Show dashboard after successful login/registration
+    document.getElementById('login').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('dashboard').style.display = 'block';
+      document.querySelector('.auth-section').style.display = 'none';
+    });
+
+    document.getElementById('register').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('dashboard').style.display = 'block';
+      document.querySelector('.auth-section').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

@@ -4,33 +4,39 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 
-   <style>
+ <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             font-size: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .container {
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
-            padding: 40px;
+            padding: 60px 40px; /* Aumento del padding para mayor espacio vertical */
             background-color: #fff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-bottom: 30px; /* Espacio adicional entre secciones */
         }
 
         h1 {
             text-align: center;
             color: #333;
             font-size: 3em;
+            margin-bottom: 20px; /* Aumento del espacio entre el título y los elementos */
         }
 
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* Espacio aumentado entre cada campo */
         }
 
         .form-group label {
@@ -72,7 +78,7 @@
         .menu button {
             width: 100%;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Aumento del espacio entre botones */
             background-color: #28a745;
             border: none;
             border-radius: 8px;
@@ -122,7 +128,7 @@
             }
 
             .container {
-                padding: 30px;
+                padding: 40px 30px;
             }
 
             .form-group input,

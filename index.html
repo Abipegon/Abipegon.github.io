@@ -69,34 +69,41 @@
         .menu button:hover {
             background-color: #218838;
         }
+        /* Estilo responsivo para diferentes tamaños de pantallas */
+@media only screen and (max-width: 720px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    .form-group input, 
+    .form-group select, 
+    .form-group button, 
+    .menu button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .form-group label {
+        font-size: 14px;
+    }
+}
 
-         /* Media Query para dispositivos más pequeños */
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px 10px;
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            .form-group input, .form-group select {
-                padding: 8px;
-                font-size: 14px;
-            }
-            .form-group button {
-                padding: 8px;
-                font-size: 14px;
-            }
-            .menu button {
-                padding: 8px;
-                font-size: 14px;
-            }
-        .work-section {
-            margin-top: 20px;
-        }
-        .work-section h2 {
-            color: #333;
-            text-align: center;
+/* Ajuste para pantalla de Samsung A04s (720x1600px) en orientación vertical */
+@media only screen and (min-width: 720px) and (max-width: 1600px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
         }
         .task-list {
             margin-top: 10px;

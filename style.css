@@ -5,52 +5,53 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-size: 18px; /* Aumentado para mejor escalabilidad */
+    font-size: 20px; /* Aumentar tamaño base para mayor escalabilidad */
 }
 
 .container {
     width: 100%;
     max-width: 100%; /* Ocupa toda la pantalla */
-    margin: 0 auto;
-    padding: 30px; /* Aumentar padding */
+    margin: 0 auto; /* Elimina el margen superior */
+    padding: 40px; /* Aumentar padding */
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Mayor sombra para mejor visibilidad */
-    border-radius: 10px; /* Más redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
     text-align: center;
     color: #333;
-    font-size: 2.4em; /* Escalar título */
+    font-size: 3em; /* Aumentar tamaño del título */
 }
 
 .form-group {
-    margin-bottom: 20px; /* Aumentar espacio entre campos */
+    margin-bottom: 30px; /* Aumentar separación entre los campos */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px; /* Más espacio */
+    margin-bottom: 10px;
     color: #333;
+    font-size: 1.5em; /* Aumentar tamaño del texto de los labels */
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 14px; /* Aumentar padding */
-    border: 1px solid #ccc;
-    border-radius: 6px; /* Más redondeado */
-    font-size: 1.4em; /* Aumentar tamaño del texto */
+    padding: 20px; /* Aumentar padding de los campos */
+    border: 2px solid #ccc; /* Aumentar grosor del borde */
+    border-radius: 8px; /* Hacer los bordes más redondeados */
+    font-size: 1.5em; /* Aumentar tamaño del texto */
 }
 
 .form-group button {
     width: 100%;
-    padding: 14px; /* Aumentar tamaño */
+    padding: 20px; /* Aumentar tamaño de los botones */
     background-color: #007bff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px; /* Bordes más redondeados */
     color: #fff;
-    font-size: 1.4em; /* Aumentar fuente */
+    font-size: 1.5em; /* Aumentar tamaño de la fuente */
     cursor: pointer;
 }
 
@@ -60,18 +61,18 @@ h1 {
 
 .menu {
     text-align: center;
-    margin-top: 30px; /* Más espacio en la parte superior */
+    margin-top: 40px; /* Aumentar espacio entre secciones */
 }
 
 .menu button {
     width: 100%;
-    padding: 14px; /* Aumentar padding */
-    margin-bottom: 15px; /* Aumentar espacio entre botones */
+    padding: 20px; /* Aumentar tamaño de los botones */
+    margin-bottom: 20px; /* Aumentar espacio entre botones */
     background-color: #28a745;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #fff;
-    font-size: 1.4em; /* Aumentar tamaño del texto */
+    font-size: 1.5em; /* Aumentar tamaño del texto */
     cursor: pointer;
 }
 
@@ -80,65 +81,73 @@ h1 {
 }
 
 .work-section {
-    margin-top: 30px; /* Más espacio en la parte superior */
+    margin-top: 40px; /* Aumentar espacio entre secciones */
 }
 
 .work-section h2 {
     color: #333;
     text-align: center;
-    font-size: 2em; /* Aumentar tamaño del texto */
+    font-size: 2.5em; /* Aumentar tamaño del texto */
 }
 
 .task-list {
-    margin-top: 20px; /* Aumentar margen superior */
+    margin-top: 20px;
 }
 
 .task-list div {
-    margin-bottom: 15px; /* Más espacio entre tareas */
-    padding: 14px; /* Aumentar padding */
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    margin-bottom: 20px; /* Aumentar espacio entre las tareas */
+    padding: 20px; /* Aumentar padding */
+    border: 2px solid #ccc; /* Aumentar grosor del borde */
+    border-radius: 8px; /* Bordes más redondeados */
 }
 
 .task-list input[type="checkbox"] {
-    margin-right: 15px;
+    margin-right: 20px; /* Aumentar espacio entre checkbox y texto */
 }
 
 .divider {
-    border-top: 1px solid #ccc;
-    margin-top: 30px; /* Más espacio superior */
-    margin-bottom: 30px; /* Más espacio inferior */
+    border-top: 2px solid #ccc; /* Aumentar grosor de la línea divisoria */
+    margin-top: 40px; /* Aumentar espacio antes de la división */
+    margin-bottom: 40px; /* Aumentar espacio después de la división */
 }
 
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Aumentar tamaño base */
+    }
+
     .container {
-        padding: 25px;
+        padding: 30px;
     }
 
     .form-group input,
     .form-group select,
     .form-group button,
     .menu button {
-        padding: 12px;
-        font-size: 1.3em; /* Ajustar tamaño */
+        padding: 15px;
+        font-size: 1.4em; /* Ajustar tamaño */
     }
 
     .task-list div {
-        padding: 12px;
+        padding: 15px;
     }
 
     h1, .work-section h2 {
-        font-size: 1.8em; /* Ajustar tamaño */
+        font-size: 2.2em;
     }
 
     .menu button {
-        font-size: 1.3em; /* Ajustar tamaño del texto */
+        font-size: 1.4em;
     }
 }
 
 /* Responsividad para pantallas muy pequeñas (móviles en modo retrato) */
 @media (max-width: 480px) {
+    body {
+        font-size: 16px; /* Ajustar tamaño base */
+    }
+
     .container {
         padding: 20px;
     }
@@ -156,11 +165,10 @@ h1 {
     }
 
     h1, .work-section h2 {
-        font-size: 1.6em; /* Ajustar tamaño */
+        font-size: 1.8em;
     }
 
     .menu button {
         font-size: 1.2em;
     }
 }
-

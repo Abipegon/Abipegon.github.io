@@ -3,149 +3,97 @@
     <title>Aplicación de Usuario</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
-
 <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 20px;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            font-size: 3em;
-        }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
 
-        .form-group {
-            margin-bottom: 30px;
-        }
+    .form-group {
+      margin-bottom: 30px;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 1.5em;
-        }
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.2em;
+    }
 
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            font-size: 1.5em;
-        }
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1.2em;
+      box-sizing: border-box;
+    }
 
-        .form-group button {
-            width: 100%;
-            padding: 20px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
+    .form-group button {
+      width: 100%;
+      padding: 15px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
 
-        .menu {
-            text-align: center;
-            margin-top: 40px;
-        }
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+        padding: 20px;
+      }
 
-        .menu button {
-            width: 100%;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #28a745;
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
+      .container {
+        width: 100%;
+        padding: 20px;
+      }
 
-        .menu button:hover {
-            background-color: #218838;
-        }
+      h1 {
+        font-size: 2em;
+      }
 
-        .work-section {
-            margin-top: 40px;
-        }
+      .form-group input, .form-group button {
+        padding: 12px;
+        font-size: 1.1em;
+      }
 
-        .work-section h2 {
-            color: #333;
-            text-align: center;
-            font-size: 2.5em;
-        }
-
-        .task-list {
-            margin-top: 20px;
-        }
-
-        .task-list div {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-        }
-
-        .task-list input[type="checkbox"] {
-            margin-right: 20px;
-        }
-
-        .divider {
-            border-top: 2px solid #ccc;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-
-            .container {
-                padding: 30px;
-            }
-
-            .form-group input,
-            .form-group select,
-            .form-group button,
-            .menu button {
-                padding: 15px;
-                font-size: 1.4em;
-            }
-
-            .task-list div {
-                padding: 15px;
-            }
-
-            h1, .work-section h2 {
-                font-size: 2.2em;
-            }
-
-            .menu button {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+      .form-group button {
+        font-size: 1.3em;
+      }
+    }
+  </style>
 </head>
 <body>
     <div class="container" id="login-container">

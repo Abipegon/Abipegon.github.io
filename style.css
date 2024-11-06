@@ -139,36 +139,3 @@ h1 {
 
     .menu button {
         font-size: 1.4em;
-    }
-}
-
-/* Responsividad para pantallas muy pequeñas (móviles en modo retrato) */
-@media (max-width: 480px) {
-    body {
-        font-size: 16px; /* Ajustar tamaño base */
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group button,
-    .menu button {
-        padding: 12px;
-        font-size: 1.2em; /* Ajustar tamaño del texto */
-    }
-
-    .task-list div {
-        padding: 12px;
-    }
-
-    h1, .work-section h2 {
-        font-size: 1.8em;
-    }
-
-    .menu button {
-        font-size: 1.2em;
-    }
-}

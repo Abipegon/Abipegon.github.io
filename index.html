@@ -56,17 +56,25 @@
     .form-group button {
       width: 100%;
       padding: 15px;
-      background-color: #007bff;
+      background: linear-gradient(45deg, #ff6f61, #ffb347);
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       color: #fff;
       font-size: 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .form-group button:hover {
-      background-color: #0056b3;
+      background: linear-gradient(45deg, #ffb347, #ff6f61);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 768px) {
@@ -93,7 +101,8 @@
         font-size: 1.3em;
       }
     }
-  </style>
+</style>
+
 </head>
 <body>
     <div class="container" id="login-container">

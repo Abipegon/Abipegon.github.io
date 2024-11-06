@@ -4,117 +4,143 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 
-   <style>
+    <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
         }
+
         .container {
             width: 100%;
-            max-width: 600px; /* Aumenta el tamaño máximo de la pantalla */
-            margin: 20px;
-            padding: 30px; /* Aumenta el padding */
+            max-width: 800px; /* Ajustado para pantallas más grandes */
+            margin: 50px auto;
+            padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-            border-radius: 10px; /* Aumenta el borde redondeado */
-            overflow-y: auto; /* Agrega scroll si el contenido excede la pantalla */
-            max-height: 90vh; /* Limita la altura de la pantalla */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+
         h1, h2 {
             text-align: center;
             color: #333;
-            font-size: 2em; /* Aumenta el tamaño del título */
+            font-size: 2.5em; /* Aumenta el tamaño del título */
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #333;
-            font-size: 1.1em; /* Aumenta el tamaño del texto */
+            font-size: 1.5em; /* Aumenta el tamaño del texto */
         }
+
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 12px; /* Aumenta el padding */
+            padding: 15px; /* Aumenta el tamaño de los inputs */
+            font-size: 1.5em;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 1.1em; /* Aumenta el tamaño del texto */
         }
+
         .form-group button {
             width: 100%;
-            padding: 12px; /* Aumenta el tamaño del botón */
+            padding: 15px; /* Aumenta el tamaño de los botones */
             background-color: #007bff;
             border: none;
             border-radius: 4px;
             color: #fff;
-            font-size: 1.2em; /* Aumenta el tamaño del texto */
+            font-size: 1.8em;
             cursor: pointer;
         }
+
         .form-group button:hover {
             background-color: #0056b3;
         }
+
         .menu {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
+
         .menu button {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
+            padding: 20px; /* Aumenta el tamaño de los botones del menú */
+            margin-bottom: 15px;
             background-color: #28a745;
             border: none;
             border-radius: 4px;
             color: #fff;
-            font-size: 1.2em; /* Aumenta el tamaño del texto */
+            font-size: 1.8em;
             cursor: pointer;
         }
+
         .menu button:hover {
             background-color: #218838;
         }
 
-        /* Estilos responsivos para tamaños más pequeños */
-        @media only screen and (max-width: 720px) {
-            .container {
-                width: 90%;
-                max-width: 100%;
-                padding: 20px;
-                margin: 10px;
-            }
-            .form-group input,
-            .form-group select,
-            .form-group button {
-                padding: 10px;
-                font-size: 1em;
-            }
-            h1, h2 {
-                font-size: 1.5em;
-            }
+        .task-list {
+            margin-top: 10px;
         }
 
-        /* Estilo vertical para pantallas grandes */
-        @media only screen and (min-width: 720px) {
+        .task-list div {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.5em;
+        }
+
+        .divider {
+            border-top: 1px solid #ccc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Ajustes responsivos */
+        @media only screen and (max-width: 720px) {
             body {
-                flex-direction: column;
+                padding: 0;
+                display: block;
             }
+
             .container {
-                max-width: 600px;
-                margin: 40px;
+                width: 100%;
+                margin: 20px auto;
+                padding: 15px;
+                box-shadow: none;
+                border-radius: 0;
             }
+
+            h1, h2 {
+                font-size: 1.8em;
+            }
+
             .form-group input,
             .form-group select,
-            .form-group button {
+            .form-group button,
+            .menu button {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+
+            .form-group label {
                 font-size: 1.2em;
             }
-            h1, h2 {
-                font-size: 2.2em;
+
+            .task-list div {
+                font-size: 1.2em;
+                padding: 10px;
             }
         }
     </style>

@@ -5,12 +5,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-size: 20px; /* Aumentar tamaño base para mayor escalabilidad */
+    font-size: 30px; /* Aumentar tamaño base para mayor escalabilidad */
 }
 
 .container {
     width: 100%;
-    max-width: 100%; /* Ocupa toda la pantalla */
+    max-width: 150%; /* Ocupa toda la pantalla */
     margin: 0 auto; /* Elimina el margen superior */
     padding: 40px; /* Aumentar padding */
     background-color: #fff;
@@ -139,3 +139,41 @@ h1 {
 
     .menu button {
         font-size: 1.4em;
+    }
+}
+
+/* Responsividad para pantallas muy pequeñas (teléfonos pequeños) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px; /* Ajustar tamaño base */
+    }
+
+    .container {
+        padding: 20px; /* Reducir padding para pantallas pequeñas */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group button,
+    .menu button {
+        padding: 12px;
+        font-size: 1.2em; /* Ajustar tamaño para pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ajustar tamaño del título */
+    }
+
+    .work-section h2 {
+        font-size: 2em; /* Ajustar tamaño del texto */
+    }
+
+    .menu button {
+        font-size: 1.2em;
+    }
+
+    .task-list div {
+        padding: 10px; /* Ajustar padding */
+    }
+}
+
